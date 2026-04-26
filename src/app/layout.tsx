@@ -5,6 +5,10 @@ import Sidebar from '@/components/Sidebar';
 export const metadata: Metadata = {
   title: 'FinLife – Textile Export Platform',
   description: 'Digital Product Passport & Invoice Financing for Turkish textile exporters',
+  icons: {
+    icon: '/logo_finlife.png',
+    apple: '/logo_finlife.png',
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
