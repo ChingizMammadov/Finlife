@@ -1,6 +1,7 @@
 'use client';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import Image from 'next/image';
 import {
   LayoutDashboard, FileText, CreditCard, Users,
   Building2, ShieldCheck, BarChart3, Settings,
@@ -23,15 +24,16 @@ export default function Sidebar() {
   return (
     <aside className="fixed left-0 top-0 h-full w-64 bg-slate-900 flex flex-col z-20 border-r border-slate-700/50">
       {/* Logo */}
-      <div className="px-6 py-5 border-b border-slate-700/60">
-        <div className="flex items-center gap-3">
-          <div className="w-9 h-9 bg-gradient-to-br from-blue-500 to-blue-700 rounded-xl flex items-center justify-center shadow-lg">
-            <Layers size={18} className="text-white" />
-          </div>
-          <div>
-            <p className="text-white font-bold text-lg leading-none">FinLife</p>
-            <p className="text-blue-400 text-xs mt-0.5 font-medium">Textile Platform</p>
-          </div>
+      <div className="px-6 py-4 border-b border-slate-700/60">
+        <div className="flex items-center justify-center">
+          <Image
+            src="/logo_finlife.png"
+            alt="FinLife Logo"
+            width={140}
+            height={60}
+            className="object-contain"
+            priority
+          />
         </div>
       </div>
 
