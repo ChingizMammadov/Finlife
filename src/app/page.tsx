@@ -69,7 +69,7 @@ const invoiceStatusColors: Record<string, string> = {
 };
 
 const formatCurrency = (v: number) =>
-  v < 0 ? `-€${Math.abs(v).toLocaleString()}` : `€${v.toLocaleString()}`;
+  v < 0 ? `-€${Math.abs(v).toLocaleString('en-US')}` : `€${v.toLocaleString('en-US')}`;
 
 export default function Dashboard() {
   const recentDPPs = dppData.slice(0, 5);
@@ -199,7 +199,7 @@ export default function Dashboard() {
                 <div key={inv.id} className="px-6 py-3.5 flex items-center justify-between hover:bg-slate-50/50 transition-colors">
                   <div className="flex-1 min-w-0">
                     <p className="text-sm font-semibold text-slate-800">{inv.id}</p>
-                    <p className="text-xs text-slate-500 mt-0.5">{inv.buyer} · €{inv.amount.toLocaleString()}</p>
+                    <p className="text-xs text-slate-500 mt-0.5">{inv.buyer} · €{inv.amount.toLocaleString('en-US')}</p>
                   </div>
                   <div className="ml-3 text-right flex-shrink-0">
                     <span className={`px-2.5 py-1 rounded-full text-xs font-medium ${invoiceStatusColors[inv.status]}`}>

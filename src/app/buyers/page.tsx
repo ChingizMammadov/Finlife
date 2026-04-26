@@ -131,8 +131,8 @@ export default function BuyersPage() {
                     <tr key={o.id} className="hover:bg-slate-50/50">
                       <td className="px-5 py-3.5 text-sm font-mono text-slate-700">{o.id}</td>
                       <td className="px-5 py-3.5 text-sm text-slate-800">{o.product}</td>
-                      <td className="px-5 py-3.5 text-sm text-slate-600">{o.qty.toLocaleString()}</td>
-                      <td className="px-5 py-3.5 text-sm font-semibold text-slate-800">€{o.value.toLocaleString()}</td>
+                      <td className="px-5 py-3.5 text-sm text-slate-600">{o.qty.toLocaleString('en-US')}</td>
+                      <td className="px-5 py-3.5 text-sm font-semibold text-slate-800">€{o.value.toLocaleString('en-US')}</td>
                       <td className="px-5 py-3.5 text-sm text-slate-600">{o.date}</td>
                       <td className="px-5 py-3.5">
                         <span className={`px-2.5 py-1 rounded-full text-xs font-medium ${orderStatusColors[o.status]}`}>

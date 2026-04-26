@@ -135,17 +135,17 @@ export default function FinancingPage() {
               <div className="space-y-3">
                 <div className="bg-emerald-50 rounded-xl p-3 border border-emerald-100">
                   <p className="text-xs text-emerald-600 font-medium">Advance Payment (82%)</p>
-                  <p className="text-2xl font-bold text-emerald-700 mt-1">€{parseInt(calcAdvance).toLocaleString()}</p>
+                  <p className="text-2xl font-bold text-emerald-700 mt-1">€{parseInt(calcAdvance).toLocaleString('en-US')}</p>
                   <p className="text-xs text-emerald-600 mt-0.5">Deposited within hours</p>
                 </div>
                 <div className="bg-slate-50 rounded-xl p-3 border border-slate-100">
                   <p className="text-xs text-slate-500 font-medium">Platform Fee (~0.4%)</p>
-                  <p className="text-lg font-bold text-slate-700 mt-0.5">€{parseInt(calcFee!).toLocaleString()}</p>
+                  <p className="text-lg font-bold text-slate-700 mt-0.5">€{parseInt(calcFee!).toLocaleString('en-US')}</p>
                 </div>
                 <div className="bg-blue-50 rounded-xl p-3 border border-blue-100">
                   <p className="text-xs text-blue-600 font-medium">Remaining at maturity</p>
                   <p className="text-lg font-bold text-blue-700 mt-0.5">
-                    €{(parseInt(calcAmount) - parseInt(calcAdvance) - parseInt(calcFee!)).toLocaleString()}
+                    €{(parseInt(calcAmount) - parseInt(calcAdvance) - parseInt(calcFee!)).toLocaleString('en-US')}
                   </p>
                 </div>
               </div>
@@ -184,9 +184,9 @@ export default function FinancingPage() {
                     <p className="text-sm font-medium text-slate-800">{inv.buyer}</p>
                     <p className="text-xs text-slate-400">{inv.buyerCountry}</p>
                   </td>
-                  <td className="px-5 py-4 text-sm font-semibold text-slate-800">€{inv.amount.toLocaleString()}</td>
+                  <td className="px-5 py-4 text-sm font-semibold text-slate-800">€{inv.amount.toLocaleString('en-US')}</td>
                   <td className="px-5 py-4 text-sm font-semibold text-emerald-600">
-                    €{(inv.amount * inv.advanceRate).toLocaleString()}
+                    €{(inv.amount * inv.advanceRate).toLocaleString('en-US')}
                   </td>
                   <td className="px-5 py-4 text-sm text-slate-600">{inv.dueDate}</td>
                   <td className="px-5 py-4 text-sm text-slate-600">{inv.factoringCompany}</td>
@@ -250,8 +250,8 @@ export default function FinancingPage() {
               </div>
               {form.amount && (
                 <div className="bg-blue-50 rounded-xl p-4 border border-blue-100">
-                  <p className="text-sm text-blue-800 font-semibold">Estimated Advance: <span className="text-emerald-700">€{(parseFloat(form.amount) * 0.82).toLocaleString()}</span></p>
-                  <p className="text-xs text-blue-600 mt-0.5">82% of €{parseFloat(form.amount).toLocaleString()} · Fee ≈ €{(parseFloat(form.amount) * 0.004).toFixed(0)}</p>
+                  <p className="text-sm text-blue-800 font-semibold">Estimated Advance: <span className="text-emerald-700">€{(parseFloat(form.amount) * 0.82).toLocaleString('en-US')}</span></p>
+                  <p className="text-xs text-blue-600 mt-0.5">82% of €{parseFloat(form.amount).toLocaleString('en-US')} · Fee ≈ €{(parseFloat(form.amount) * 0.004).toFixed(0)}</p>
                 </div>
               )}
               <div className="flex gap-3 pt-2">

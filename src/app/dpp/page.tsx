@@ -180,7 +180,7 @@ export default function DPPPage() {
                     <p className="text-sm font-medium text-slate-700">{dpp.buyer}</p>
                     <p className="text-xs text-slate-400">{dpp.buyerCountry}</p>
                   </td>
-                  <td className="px-5 py-4 text-sm text-slate-600">{dpp.quantity.toLocaleString()}</td>
+                  <td className="px-5 py-4 text-sm text-slate-600">{dpp.quantity.toLocaleString('en-US')}</td>
                   <td className="px-5 py-4">
                     <div className="flex items-center gap-1">
                       <Leaf size={12} className="text-emerald-500" />
@@ -255,7 +255,7 @@ export default function DPPPage() {
                   ['Category', selected.category],
                   ['Factory', selected.factory],
                   ['Production Date', selected.productionDate],
-                  ['Quantity', `${selected.quantity.toLocaleString()} pcs`],
+                  ['Quantity', `${selected.quantity.toLocaleString('en-US')} pcs`],
                   ['Buyer', `${selected.buyer} (${selected.buyerCountry})`],
                 ].map(([k, v]) => (
                   <div key={k} className="flex justify-between text-sm">
