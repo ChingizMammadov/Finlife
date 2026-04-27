@@ -3,7 +3,7 @@ import { useState } from 'react';
 import Header from '@/components/Header';
 import { supplierData, Supplier } from '@/lib/mockData';
 import { Plus, Search, X, MapPin, CheckCircle2, Clock, XCircle, Award, AlertTriangle } from 'lucide-react';
-import { RadarChart, Radar, PolarGrid, PolarAngleAxis, ResponsiveContainer, BarChart, Bar, XAxis, YAxis, Tooltip, Cell } from 'recharts';
+import { RadarChart, Radar, PolarGrid, PolarAngleAxis, ResponsiveContainer, BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Cell } from 'recharts';
 
 const verifyColors: Record<string,string> = {
   Verified:'bg-emerald-100 text-emerald-700 border-emerald-200',
